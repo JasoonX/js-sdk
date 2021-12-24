@@ -32,7 +32,7 @@ const TokenStreamDataLayout = BufferLayout.struct<TokenStreamData>([
   BufferLayout.blob(4, "padding"),
 ]);
 
-export function decode_token_stream_data(buf: Buffer) {
+export function decode(buf: Buffer) {
   let raw = TokenStreamDataLayout.decode(buf);
   return {
     magic: new BN(raw.magic, LE),

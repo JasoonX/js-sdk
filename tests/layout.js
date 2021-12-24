@@ -33,7 +33,7 @@ const TokenStreamDataLayout = BufferLayout.struct([
   BufferLayout.blob(4, "padding"),
 ]);
 
-function decode_token_stream_data(buf) {
+function decode(buf) {
   let raw = TokenStreamDataLayout.decode(buf);
   return {
     magic: new BN(raw.magic, LE),
@@ -56,9 +56,7 @@ function decode_token_stream_data(buf) {
     cliff: new BN(raw.cliff, LE),
     cliff_amount: new BN(raw.cliff_amount, LE),
     is_cancelable_by_sender: Boolean(raw.is_cancelable_by_sender.readUInt8()),
-    is_cancelable_by_recipient: Boolean(
-      raw.is_cancelable_by_recipient.readUInt8()
-    ),
+    is_cancelable_by_recipient: Boolean(raw.is_cancelable_by_recipient.readUInt8()),
     is_withdrawal_public: Boolean(raw.is_withdrawal_public.readUInt8()),
     is_transferable: Boolean(raw.is_transferable.readUInt8()),
   };
@@ -91,4 +89,4 @@ function decode_token_stream_data(buf) {
 //
 // }
 
-exports.decode = decode_token_stream_data;
+exports.decode = decode;
