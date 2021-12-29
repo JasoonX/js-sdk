@@ -58,7 +58,7 @@ interface StreamInstruction {
   stream_name: string;
 }
 
-const TokenStreamDataLayout = BufferLayout.struct<TokenStreamData>([
+const TokenStreamDataLayout = BufferLayout.struct<Stream>([
   BufferLayout.blob(8, "magic"),
   BufferLayout.blob(8, "created_at"),
   BufferLayout.blob(8, "withdrawn_amount"),
@@ -119,7 +119,7 @@ export function decode(buf: Buffer) {
   };
 }
 
-export interface TokenStreamData {
+export interface Stream {
   magic: BN;
   created_at: BN;
   withdrawn_amount: BN;
@@ -147,3 +147,5 @@ export interface TokenStreamData {
   release_rate: BN;
   stream_name: string;
 }
+
+export type AccountsType = "sender" | "recipient";
