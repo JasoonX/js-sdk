@@ -1165,7 +1165,7 @@ dependencies = [
 [[package]]
 name = "streamflow-timelock"
 version = "0.3.0"
-source = "git+https://github.com/StreamFlow-Finance/timelock-crate?branch=bytes_name#d39ab3ca562f75ff701939a7f7982b61ffdb26a9"
+source = "git+https://github.com/StreamFlow-Finance/timelock-crate?branch=bytes_name#270f4abffb5137b4f05fcc3649e61659f6956d63"
 dependencies = [
  "borsh",
  "num-traits",
