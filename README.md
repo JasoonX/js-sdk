@@ -43,7 +43,7 @@ System has 4 composable layers. These are (top to bottom):
 
 ![Platform overview](/misc/platform.png)
 
-## Usage
+# Usage
 
 (for the newest SDK version, if you use older version check types and usages inside npm package)
 
