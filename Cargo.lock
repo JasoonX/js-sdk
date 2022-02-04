@@ -1291,7 +1291,7 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "streamflow-timelock"
 version = "0.3.0"
-source = "git+ssh://git@github.com/streamFlow-finance/protocol.git?branch=beta#a40614bba93fa9b00f894ace98d3b46f0c30989b"
+source = "git+ssh://git@github.com/streamFlow-finance/protocol.git?branch=dev#a40614bba93fa9b00f894ace98d3b46f0c30989b"
 dependencies = [
  "borsh 0.9.3",
  "num-traits",
