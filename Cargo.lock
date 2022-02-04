@@ -157,7 +157,7 @@ dependencies = [
  "anchor-derive-accounts",
  "base64 0.13.0",
  "bincode",
- "borsh 0.9.2",
+ "borsh 0.9.3",
  "bytemuck",
  "solana-program",
  "thiserror",
@@ -306,11 +306,11 @@ dependencies = [
 
 [[package]]
 name = "borsh"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c9d0958efb8301e1626692ea879cbff622ef45cf731807ec8d488b34be98cb8"
+checksum = "15bf3650200d8bffa99015595e10f1fbd17de07abbc25bb067da79e769939bfa"
 dependencies = [
- "borsh-derive 0.9.2",
+ "borsh-derive 0.9.3",
  "hashbrown",
 ]
 
@@ -341,12 +341,12 @@ dependencies = [
 
 [[package]]
 name = "borsh-derive"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "325164710ad57bae6d32455ce3bd384f95768464a927ce145626dc3390a7f9fe"
+checksum = "6441c552f230375d18e3cc377677914d2ca2b0d36e52129fe15450a2dce46775"
 dependencies = [
- "borsh-derive-internal 0.9.2",
- "borsh-schema-derive-internal 0.9.2",
+ "borsh-derive-internal 0.9.3",
+ "borsh-schema-derive-internal 0.9.3",
  "proc-macro-crate 0.1.5",
  "proc-macro2",
  "syn",
@@ -376,9 +376,9 @@ dependencies = [
 
 [[package]]
 name = "borsh-derive-internal"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f74159f43b231f4af8c4ce4967fef76e4e59725acf51706ddb9268c94348d15c"
+checksum = "5449c28a7b352f2d1e592a8a28bf139bc71afb0764a14f3c02500935d8c44065"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -409,9 +409,9 @@ dependencies = [
 
 [[package]]
 name = "borsh-schema-derive-internal"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "99b2a77771907a820a860d200d193a0787c79a7890c8e253c462fa0f51ad58b6"
+checksum = "cdbd5696d8bfa21d53d9fe39a714a18538bad11492a42d066dbbc395fb1951c0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -907,7 +907,7 @@ name = "partner-oracle"
 version = "0.0.1"
 source = "git+ssh://git@github.com/streamflow-finance/partner-oracle.git#5a39766e8b974c8accc9322d917d4d6cce1b184f"
 dependencies = [
- "borsh 0.9.2",
+ "borsh 0.9.3",
  "solana-program",
 ]
 
@@ -1197,8 +1197,8 @@ dependencies = [
  "bincode",
  "bitflags",
  "blake3",
- "borsh 0.9.2",
- "borsh-derive 0.9.2",
+ "borsh 0.9.3",
+ "borsh-derive 0.9.3",
  "bs58 0.4.0",
  "bv",
  "bytemuck",
@@ -1291,9 +1291,9 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "streamflow-timelock"
 version = "0.3.0"
-source = "git+ssh://git@github.com/streamFlow-finance/protocol.git?branch=dev#e7d20d5146b3c9abdbffddc0aecd1ea7d0d53a05"
+source = "git+ssh://git@github.com/streamFlow-finance/protocol.git?branch=beta#a40614bba93fa9b00f894ace98d3b46f0c30989b"
 dependencies = [
- "borsh 0.9.2",
+ "borsh 0.9.3",
  "num-traits",
  "partner-oracle",
  "solana-program",
