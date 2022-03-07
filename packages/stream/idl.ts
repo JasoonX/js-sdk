@@ -16,6 +16,11 @@ export default {
           isSigner: false,
         },
         {
+          name: "payer",
+          isMut: true,
+          isSigner: true,
+        },
+        {
           name: "recipient",
           isMut: true,
           isSigner: false,

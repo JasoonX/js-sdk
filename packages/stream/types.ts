@@ -53,6 +53,7 @@ export interface CreateStreamData {
 }
 export interface CreateStreamParams extends CreateStreamData {
   sender: Wallet;
+  payer: string;
   partner?: string | null;
 }
 

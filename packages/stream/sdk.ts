@@ -86,6 +86,7 @@ export default class Stream {
    * @param {CreateStreamParams} data
    * @param {Wallet} data.sender - Wallet signing the transaction. Its address should match the authorized wallet (sender) or transaction will fail.
    * @param {string} data.recipient - Solana address of the recipient. Associated token account will be derived using this address and token mint address.
+   * @param {string} data.payer - Solana address of the payer.
    * @param {string} data.mint - SPL Token mint.
    * @param {number} data.start - Timestamp (in seconds) when the stream/token vesting starts.
    * @param {u64} data.depositedAmount - Initially deposited amount of tokens (in the smallest units).
@@ -105,6 +106,7 @@ export default class Stream {
   public async create({
     sender,
     recipient,
+    payer,
     mint,
     start,
     depositedAmount,
@@ -166,6 +168,7 @@ export default class Stream {
         {
           sender: sender.publicKey,
           senderTokens,
+          payer: new PublicKey(payer),
           recipient: new PublicKey(recipient),
           metadata: metadata.publicKey,
           escrowTokens,

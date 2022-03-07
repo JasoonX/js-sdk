@@ -25,6 +25,7 @@ interface CreateStreamData {
 interface CreateStreamAccounts {
   sender: PublicKey;
   senderTokens: PublicKey;
+  payer: PublicKey;
   recipient: PublicKey;
   recipientTokens: PublicKey;
   metadata: PublicKey;
@@ -51,6 +52,7 @@ export const createStreamInstruction = (
   const keys = [
     { pubkey: accounts.sender, isSigner: true, isWritable: true },
     { pubkey: accounts.senderTokens, isSigner: false, isWritable: true },
+    { pubkey: accounts.payer, isSigner: true, isWritable: true },
     { pubkey: accounts.recipient, isSigner: false, isWritable: true },
     { pubkey: accounts.metadata, isSigner: true, isWritable: true },
     { pubkey: accounts.escrowTokens, isSigner: false, isWritable: true },
